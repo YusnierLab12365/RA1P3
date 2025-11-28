@@ -2,9 +2,9 @@ name: CI & Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -23,9 +23,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: ./  # publica toda la carpeta del repo (index.html, css/)
+          path: ./  # sitio estático puro HTML y CSS
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
